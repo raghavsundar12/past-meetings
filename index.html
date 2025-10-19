@@ -290,5 +290,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<div id="footer"></div>
+
+<script>
+  // Load footer.html dynamically
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Footer load error:", err));
+</script>
+
 </body>
 </html>
+
