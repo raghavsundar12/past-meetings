@@ -1,238 +1,294 @@
-<footer class="footer">
-  <div class="footer-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>FBLA Presentations</title>
 
-    <!-- Contact Info -->
-    <div class="footer-section footer-contact">
-      <div class="section-heading">
-        <h3>Contact Us</h3>
-        <div class="heading-underline"></div>
-      </div>
-      <p>Wheeler High School FBLA</p>
-      <p>375 Holt Rd NE, Marietta, GA 30068</p>
-      <p><a href="mailto:wheelerfbla@gmail.com">wheelerfbla@gmail.com</a></p>
-    </div>
-
-    <!-- Mini Menu (Centered) -->
-    <div class="footer-section footer-menu">
-      <div class="section-heading">
-        <h3>Quick Links</h3>
-        <div class="heading-underline"></div>
-      </div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="photos.html">Photos</a></li>
-        <li><a href="past-meetings.html">Past Meetings</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-      </ul>
-    </div>
-
-    <!-- Social Links -->
-    <div class="footer-section footer-social">
-      <div class="section-heading">
-        <h3>Connect</h3>
-        <div class="heading-underline"></div>
-      </div>
-      <div class="social-icons">
-        <a href="mailto:wheelerfbla@gmail.com" title="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-        <a href="https://www.tiktok.com/@wheelerfbla" target="_blank" title="TikTok">
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
-        <a href="https://www.instagram.com/wheelerfbla/" target="_blank" title="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 Wheeler High School FBLA. All Rights Reserved.</p>
-  </div>
-</footer>
-
-<!-- Font Awesome (for icons) -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-  .footer {
-    background: linear-gradient(180deg, #002868, #001b47);
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    padding: 50px 0 25px;
-    border-top: 3px solid #ffd700;
-    margin-top: 60px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-
-  .footer.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 60px;
-    flex-wrap: wrap;
-  }
-
-  .footer-menu {
-    flex: 1;
-    text-align: center;
-  }
-
-  .footer-contact,
-  .footer-social {
-    flex: 1;
-    min-width: 200px;
-  }
-
-  .footer-social {
-    text-align: center;
-  }
-
-  .section-heading {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .footer-menu .section-heading,
-  .footer-social .section-heading {
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  .footer-section h3 {
-    font-weight: 600;
+  body {
     margin: 0;
-    color: #ffd700;
-    font-size: 1.15rem;
-    text-transform: none;
+    font-family: 'Montserrat', sans-serif;
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
   }
 
-  .heading-underline {
-    width: 50px;
-    height: 3px;
-    background-color: #ffd700;
+  h1 {
+    color: #081f3f;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+  }
+
+  h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #081f3f;
+    margin: 10px auto 25px;
     border-radius: 2px;
-    opacity: 0;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    margin-top: 3px;
-    margin-bottom: 10px;
   }
 
-  .footer.visible .heading-underline {
-    opacity: 1;
-    transform: scaleX(1);
+  .subtitle {
+    font-size: 1.5rem;
+    color: #081f3f;
+    text-align: center;
+    margin-bottom: 30px;
   }
 
-  .footer-section p,
-  .footer-section a,
-  .footer-menu li {
-    font-size: 0.95rem;
-    line-height: 1.6;
+  :root {
+    --fbla-blue: #003399;
+    --fbla-gold: #d4af37;
+    --fbla-light: #f5f7fa;
   }
 
-  /* Add more breathing room specifically for Contact section */
-  .footer-contact p {
-    margin: 10px 0;
+  #fbla-accordion {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  .footer-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
+  .fbla-item {
+    border: 1px solid #d9e1f2;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
   }
 
-  .footer-menu li {
-    margin: 8px 0;
+  .fbla-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
-  .footer-menu a {
+  .fbla-toggle {
+    width: 100%;
+    background: #133f7d; 
     color: white;
+    border: none;
+    padding: 20px 24px;
+    font-size: 1.25em;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .fbla-toggle::after {
+    content: "▸";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    font-size: 1.2em;
+  }
+
+  .fbla-item.open .fbla-toggle::after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  .fbla-toggle:hover {
+    background: #0b2d5a;
+    color: var(--fbla-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .fbla-panel {
+    height: 0;
+    overflow: hidden;
+    background: var(--fbla-light);
+    transition: height 0.45s ease;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .fbla-panel iframe {
+    margin: 16px 0;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .fbla-panel a {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: var(--fbla-blue);
     text-decoration: none;
-    transition: color 0.3s;
+    margin-top: 10px;
+    transition: color 0.2s ease;
+    font-size: 1.2em;
   }
 
-  .footer-menu a:hover {
-    color: #ffd700;
-  }
-
-  .footer-contact a {
-    color: #ffd700;
-    text-decoration: none;
-  }
-
-  .footer-contact a:hover {
+  .fbla-panel a:hover {
+    color: var(--fbla-gold);
     text-decoration: underline;
   }
 
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-  }
-
-  .social-icons a {
-    color: white;
-    font-size: 1.4rem;
-    transition: transform 0.3s, color 0.3s;
-  }
-
-  .social-icons a:hover {
-    color: #ffd700;
-    transform: scale(1.2);
-  }
-
-  .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.2);
-    margin-top: 30px;
-    padding-top: 15px;
-    text-align: center;
-    font-size: 0.9rem;
-    opacity: 0.8;
-  }
-
-  @media (max-width: 900px) {
-    .footer-container {
-      flex-direction: column;
-      text-align: center;
-      gap: 30px;
-    }
-
-    .section-heading {
-      align-items: center;
-    }
+  @media (max-width: 700px) {
+    .fbla-panel iframe { height: 320px; }
   }
 </style>
+</head>
+<body>
+<h1>Past Meetings</h1>
+<div class="subtitle">View slides and materials from previous FBLA meetings here:
+</div>
+
+<div id="fbla-accordion">
+
+<!-- Newest meetings first -->
+
+<!-- Meeting 7 -->
+<div class="fbla-item">
+<button class="fbla-toggle">Meeting 7 - 10/8/2025</button>
+<div class="fbla-panel">
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 8px; margin-top: 1.6em; margin-bottom: 0.9em;">
+<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+src="https://www.canva.com/design/DAG1EAsSX6w/IymHjdfzmaxXZLF3whwTuA/view?embed" allowfullscreen></iframe>
+</div>
+<a href="https://www.canva.com/design/DAG1EAsSX6w/IymHjdfzmaxXZLF3whwTuA/view" target="_blank" rel="noopener">View Presentation Slides</a>
+</div>
+</div>
+
+<!-- Meeting 6 -->
+<div class="fbla-item">
+<button class="fbla-toggle">Meeting 6 - 10/1/2025</button>
+<div class="fbla-panel">
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 8px; margin-top: 1.6em; margin-bottom: 0.9em;">
+<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+src="https://www.canva.com/design/DAG0dTILzc0/yOZhq7uloujMeSVzRA2waw/view?embed" allowfullscreen></iframe>
+</div>
+<a href="https://www.canva.com/design/DAG0dTILzc0/yOZhq7uloujMeSVzRA2waw/view" target="_blank" rel="noopener">View Presentation Slides</a>
+</div>
+</div>
+
+<!-- Meeting 5 -->
+<div class="fbla-item">
+<button class="fbla-toggle">Meeting 5 - 9/17/2025</button>
+<div class="fbla-panel">
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 8px; margin-top: 1.6em; margin-bottom: 0.9em;">
+<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+src="https://www.canva.com/design/DAGzLXtJg_0/YpqdXfUIZkEyH8M9VvY5FA/view?embed" allowfullscreen></iframe>
+</div>
+<a href="https://www.canva.com/design/DAGzLXtJg_0/YpqdXfUIZkEyH8M9VvY5FA/view" target="_blank" rel="noopener">View Presentation Slides</a>
+</div>
+</div>
+
+<!-- Meeting 4 -->
+<div class="fbla-item">
+<button class="fbla-toggle">Meeting 4 - 9/10/2025</button>
+<div class="fbla-panel">
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 8px; margin-top: 1.6em; margin-bottom: 0.9em;">
+<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+src="https://www.canva.com/design/DAGyLKb-fRI/a9iv8hNsOAPB8jHKVSTiPw/view?embed" allowfullscreen></iframe>
+</div>
+<a href="https://www.canva.com/design/DAGyLKb-fRI/a9iv8hNsOAPB8jHKVSTiPw/view" target="_blank" rel="noopener">View Presentation Slides</a>
+</div>
+</div>
+
+<!-- Meeting 3 -->
+<div class="fbla-item">
+<button class="fbla-toggle">Meeting 3 - 9/3/2025</button>
+<div class="fbla-panel">
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 8px; margin-top: 1.6em; margin-bottom: 0.9em;">
+<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+src="https://www.canva.com/design/DAGxkM0h8HY/nTrmiExE7B62af5T0LfGBw/view?embed" allowfullscreen></iframe>
+</div>
+<a href="https://www.canva.com/design/DAGxkM0h8HY/nTrmiExE7B62af5T0LfGBw/view" target="_blank" rel="noopener">View Presentation Slides</a>
+</div>
+</div>
+
+<!-- Meeting 2 -->
+<div class="fbla-item">
+<button class="fbla-toggle">Meeting 2 - 8/27/2025</button>
+<div class="fbla-panel">
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 8px; margin-top: 1.6em; margin-bottom: 0.9em;">
+<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+src="https://www.canva.com/design/DAGxAdSNQCI/U0zRdteulWDHjPLQDtUbRg/view?embed" allowfullscreen></iframe>
+</div>
+<a href="https://www.canva.com/design/DAGxAdSNQCI/U0zRdteulWDHjPLQDtUbRg/view" target="_blank" rel="noopener">View Presentation Slides</a>
+</div>
+</div>
+
+<!-- Meeting 1 -->
+<div class="fbla-item">
+<button class="fbla-toggle">Meeting 1 - 8/20/2025</button>
+<div class="fbla-panel">
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 8px; margin-top: 1.6em; margin-bottom: 0.9em;">
+<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+src="https://www.canva.com/design/DAGwQ8FjlRY/OBVWHLmitLXQIDg19hsUAg/view?embed" allowfullscreen></iframe>
+</div>
+<a href="https://www.canva.com/design/DAGwQ8FjlRY/OBVWHLmitLXQIDg19hsUAg/view" target="_blank" rel="noopener">View Presentation Slides</a>
+</div>
+</div>
+
+<!-- Interest Meeting -->
+<div class="fbla-item">
+<button class="fbla-toggle">Interest Meeting - 8/13/2025</button>
+<div class="fbla-panel">
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 8px; margin-top: 1.6em; margin-bottom: 0.9em;">
+<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+src="https://www.canva.com/design/DAGoFTThXVo/wQrF_SWwXw-QN4n9b4PbuQ/view?embed" allowfullscreen></iframe>
+</div>
+<a href="https://www.canva.com/design/DAGoFTThXVo/wQrF_SWwXw-QN4n9b4PbuQ/view" target="_blank" rel="noopener">View Presentation Slides</a>
+</div>
+</div>
+
+</div>
 
 <script>
-  // Fade-in footer animation on scroll
-  const footer = document.querySelector('.footer');
+document.addEventListener('DOMContentLoaded', function() {
+  const items = document.querySelectorAll('#fbla-accordion .fbla-item');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        footer.classList.add('visible');
-        observer.unobserve(footer);
+  function closeItem(item) {
+    const panel = item.querySelector('.fbla-panel');
+    panel.style.height = panel.scrollHeight + 'px';
+    requestAnimationFrame(() => panel.style.height = '0px');
+    item.classList.remove('open');
+  }
+
+  function openItem(item) {
+    const panel = item.querySelector('.fbla-panel');
+    panel.style.height = panel.scrollHeight + 'px';
+    item.classList.add('open');
+    panel.addEventListener('transitionend', function tidy() {
+      panel.style.height = 'auto';
+      panel.removeEventListener('transitionend', tidy);
+    });
+  }
+
+  function closeAll(except) {
+    items.forEach(it => { if (it !== except && it.classList.contains('open')) closeItem(it); });
+  }
+
+  items.forEach(item => {
+    const btn = item.querySelector('.fbla-toggle');
+    btn.addEventListener('click', () => {
+      if (item.classList.contains('open')) {
+        closeItem(item);
+      } else {
+        closeAll(item);
+        const panel = item.querySelector('.fbla-panel');
+        panel.style.height = '0px';
+        requestAnimationFrame(() => openItem(item));
       }
     });
-  }, { threshold: 0.2 });
-
-  observer.observe(footer);
+  });
+});
 </script>
+
+</body>
+</html>
