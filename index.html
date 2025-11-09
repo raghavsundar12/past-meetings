@@ -44,7 +44,7 @@
   }
 
   :root {
-    --fbla-blue: #003399;
+    --fbla-blue: #002855;
     --fbla-gold: #d4af37;
     --fbla-light: #f5f7fa;
   }
@@ -72,7 +72,7 @@
 
   .fbla-toggle {
     width: 100%;
-    background: #133f7d; 
+    background: var(--fbla-blue); 
     color: white;
     border: none;
     padding: 20px 24px;
@@ -98,9 +98,23 @@
   .fbla-item.open .fbla-toggle::after {
     transform: translateY(-50%) rotate(90deg);
   }
+  .fbla-toggle::after {
+  content: "▸";
+  position: absolute;
+  right: 20px;
+  font-size: 1.2em;
+  color: #FDBB30; /* FBLA Gold */
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when expanded */
+.fbla-toggle.active::after {
+  transform: rotate(90deg);
+  color: #FDBB30; /* Keep gold even when active */
+}
 
   .fbla-toggle:hover {
-    background: #0b2d5a;
+    background: #001b47;
     color: var(--fbla-gold);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -538,4 +552,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
-
